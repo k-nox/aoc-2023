@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Printf("Part One Solution: %d", partone.Solve())
+	fmt.Printf("Part One Solution: %d\n", partone.Solve())
 	fmt.Printf("Part Two Solution: %d", parttwo.Solve())
 }
