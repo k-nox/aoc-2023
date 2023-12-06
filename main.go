@@ -3,5 +3,7 @@ package main
 import "github.com/k-nox/aoc2023/util"
 
 func main() {
-	util.Generate(7)
+	for day := 7; day <= 25; day++ {
+		util.Generate(day)
+	}
 }
