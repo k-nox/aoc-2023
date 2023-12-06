@@ -2,6 +2,7 @@ package util
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 )
 
@@ -19,6 +20,15 @@ func NewFileScanner(path string) *FileScanner {
 		file:    file,
 		scanner: bufio.NewScanner(file),
 	}
+}
+
+func NewScannerForInput(day int, readSample bool) *FileScanner {
+	file := "input"
+	if readSample {
+		file = "sample"
+	}
+
+	return NewFileScanner(fmt.Sprintf("day%02d/input/%s.txt", day, file))
 }
 
 func (f *FileScanner) Close() {
